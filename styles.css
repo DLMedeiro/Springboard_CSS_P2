@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+/* Mock 1 */
+
+.mock1{
+    border: 3px solid rgba(49,99,235);
+    background:rgb(210, 221, 253);
+    margin: 3px;
+}
+.mock1 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+button {
+    font-size: 25px;
+    background-color: rgb(49, 99, 235);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color .05s;
+}
+button:hover {
+    background-color: rgb(13, 47, 139);
+    cursor: pointer;
+}
+
+/* Mock 2 */
+
+.mock2{
+background-color: rgb(194, 248, 212);
+border: 3px solid rgb(3, 105, 37);
+/* Why does this background transfer into the container background? (and the border doesn't) */
+margin: 3px;
+}
+.mock2 .container{
+    margin: 50px auto;
+    width: 600px;
+    border-radius: 10px;
+    border: #ccc 3px solid;
+    background-color:#fff;
+}
+.mock2 img {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+.mock2 h2 {
+    padding: 20px;
+    border-bottom: #ccc 2px solid;
+}
+.mock2 p {
+    padding: 20px;
+}
+
+/* Mock 3 */
+
+.mock3 {
+    background: rgb(245, 231, 245);
+    border: 3px solid rgb(78, 1, 78);
+    margin: 3px;
+}
+.mock3 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.card-content{
+    height: 300px;
+    width: 300px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.gif{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border:rgb(78, 1, 78) 2px solid;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 35%;
+    left: 0;
+    background-color: rgba(41, 1, 51, 0.6);
+    border-radius: 10px;
+    color: white;
+}
+
+
+.text-area{
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: transparent;
+    color: transparent;
+    padding-top:100%;
+    transition: top 2s;
+}
+
+.text-area:hover {
+    top: -300px;
+}
+
+/* Responsivness */
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: black;
+    }
+
+/* Mock 1 */
+    .mock1{
+        border: 3px solid  rgb(210, 221, 253);
+        background:rgba(49,99,235);
+        color:rgb(210, 221, 253);
+    }
+    button{
+        color: rgb(13, 47, 139);
+        background-color: rgb(210, 221, 253);
+    }
+    button:hover {
+        color:rgb(210, 221, 253);
+    }
+
+    /* Mock 2 */
+    /* */
+    .mock2{
+        background-color: rgb(3, 105, 37);
+        border: 3px solid rgb(194, 248, 212); 
+        color: rgb(194, 248, 212); 
+    }
+    .mock2 .container{
+        color: black;
+        width: 300px;
+    }
+
+
+    /* Mock3 */
+    .mock3 {
+        background:rgb(78, 1, 78);
+        border: 3px solid  rgb(245, 231, 245);
+        color: rgb(245, 231, 245);
+        
+    }
+    .mock3 .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 120vh;
+
+    }
+    .gif {
+        border: 3px solid  rgb(245, 231, 245);
+    }
+}
